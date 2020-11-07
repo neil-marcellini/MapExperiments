@@ -9,24 +9,35 @@ import SwiftUI
 import MapKit
 import CoreGPX
 
+
+class Coordinator: NSObject, MKMapViewDelegate {
+    var parent: MKMapView
+
+    init(_ parent: MKMapView) {
+        self.parent = parent
+    }
+}
+
 struct ContentView: View {
     @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.81062103807926177978515625, longitude: -122.45675641112029552459716796875), span: MKCoordinateSpan(latitudeDelta: 0.25, longitudeDelta: 0.25))
-    
-    init() {
-        let coordinates = getCoordinates()
-        let track_line = MKPolyline(coordinates: coordinates, count: coordinates.count)
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2D(latitude: 37.8119495697319507598876953125, longitude: -122.45539963245391845703125)
-        annotation.title = "A Place"
-        MKMapView.appearance().addAnnotation(annotation)
-        MKMapView.appearance().addOverlay(track_line)
-    }
+    @State var route: MKPolyline?
     
     var body: some View {
-        Map(coordinateRegion: $region, interactionModes: .all, showsUserLocation: false, userTrackingMode: nil)
+        MapView(route: $route).onAppear() {
+            addTrack()
+        }
     }
     
 }
+
+private extension ContentView {
+    func addTrack() {
+        var coordinates = getCoordinates()
+        let track_line = MKPolyline(coordinates: &coordinates, count: coordinates.count)
+       route = track_line
+    }
+}
+
 
 func getCoordinates()->[CLLocationCoordinate2D] {
     var coordinates = [CLLocationCoordinate2D()]
@@ -45,6 +56,9 @@ func getCoordinates()->[CLLocationCoordinate2D] {
     }
     return coordinates
 }
+
+
+
     
 
 

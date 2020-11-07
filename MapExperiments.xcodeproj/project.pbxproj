@@ -17,6 +17,7 @@
 		319159992555ED9D00C68964 /* MapExperimentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319159982555ED9D00C68964 /* MapExperimentsUITests.swift */; };
 		319159AB2555F5AC00C68964 /* CoreGPX in Frameworks */ = {isa = PBXBuildFile; productRef = 319159AA2555F5AC00C68964 /* CoreGPX */; };
 		319159B02555F64800C68964 /* Crissy-8-13.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 319159AF2555F64800C68964 /* Crissy-8-13.gpx */; };
+		319159B52556409800C68964 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319159B42556409700C68964 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		319159982555ED9D00C68964 /* MapExperimentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapExperimentsUITests.swift; sourceTree = "<group>"; };
 		3191599A2555ED9D00C68964 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		319159AF2555F64800C68964 /* Crissy-8-13.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Crissy-8-13.gpx"; sourceTree = "<group>"; };
+		319159B42556409700C68964 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				319159762555ED9A00C68964 /* AppDelegate.swift */,
 				319159782555ED9A00C68964 /* SceneDelegate.swift */,
 				3191597A2555ED9A00C68964 /* ContentView.swift */,
+				319159B42556409700C68964 /* MapView.swift */,
 				3191597C2555ED9D00C68964 /* Assets.xcassets */,
 				319159812555ED9D00C68964 /* LaunchScreen.storyboard */,
 				319159842555ED9D00C68964 /* Info.plist */,
@@ -279,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				319159772555ED9A00C68964 /* AppDelegate.swift in Sources */,
+				319159B52556409800C68964 /* MapView.swift in Sources */,
 				319159792555ED9A00C68964 /* SceneDelegate.swift in Sources */,
 				3191597B2555ED9A00C68964 /* ContentView.swift in Sources */,
 			);
