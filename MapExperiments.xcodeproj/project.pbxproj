@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		319159832555ED9D00C68964 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 319159812555ED9D00C68964 /* LaunchScreen.storyboard */; };
 		3191598E2555ED9D00C68964 /* MapExperimentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3191598D2555ED9D00C68964 /* MapExperimentsTests.swift */; };
 		319159992555ED9D00C68964 /* MapExperimentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319159982555ED9D00C68964 /* MapExperimentsUITests.swift */; };
+		319159AB2555F5AC00C68964 /* CoreGPX in Frameworks */ = {isa = PBXBuildFile; productRef = 319159AA2555F5AC00C68964 /* CoreGPX */; };
+		319159B02555F64800C68964 /* Crissy-8-13.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 319159AF2555F64800C68964 /* Crissy-8-13.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		319159942555ED9D00C68964 /* MapExperimentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapExperimentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		319159982555ED9D00C68964 /* MapExperimentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapExperimentsUITests.swift; sourceTree = "<group>"; };
 		3191599A2555ED9D00C68964 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		319159AF2555F64800C68964 /* Crissy-8-13.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Crissy-8-13.gpx"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				319159AB2555F5AC00C68964 /* CoreGPX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +109,7 @@
 				3191597C2555ED9D00C68964 /* Assets.xcassets */,
 				319159812555ED9D00C68964 /* LaunchScreen.storyboard */,
 				319159842555ED9D00C68964 /* Info.plist */,
+				319159AF2555F64800C68964 /* Crissy-8-13.gpx */,
 				3191597E2555ED9D00C68964 /* Preview Content */,
 			);
 			path = MapExperiments;
@@ -152,6 +157,9 @@
 			dependencies = (
 			);
 			name = MapExperiments;
+			packageProductDependencies = (
+				319159AA2555F5AC00C68964 /* CoreGPX */,
+			);
 			productName = MapExperiments;
 			productReference = 319159732555ED9A00C68964 /* MapExperiments.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +231,9 @@
 				Base,
 			);
 			mainGroup = 3191596A2555ED9A00C68964;
+			packageReferences = (
+				319159A92555F5AC00C68964 /* XCRemoteSwiftPackageReference "CoreGPX" */,
+			);
 			productRefGroup = 319159742555ED9A00C68964 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -242,6 +253,7 @@
 				319159832555ED9D00C68964 /* LaunchScreen.storyboard in Resources */,
 				319159802555ED9D00C68964 /* Preview Assets.xcassets in Resources */,
 				3191597D2555ED9D00C68964 /* Assets.xcassets in Resources */,
+				319159B02555F64800C68964 /* Crissy-8-13.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -597,6 +609,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		319159A92555F5AC00C68964 /* XCRemoteSwiftPackageReference "CoreGPX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vincentneo/CoreGPX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		319159AA2555F5AC00C68964 /* CoreGPX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 319159A92555F5AC00C68964 /* XCRemoteSwiftPackageReference "CoreGPX" */;
+			productName = CoreGPX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3191596B2555ED9A00C68964 /* Project object */;
 }
