@@ -40,6 +40,7 @@ private extension MapView {
 class MapViewDelegate: NSObject, MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.lineWidth = 1.0
         renderer.fillColor = UIColor.red.withAlphaComponent(0.5)
         renderer.strokeColor = UIColor.red.withAlphaComponent(0.8)
         return renderer

@@ -19,7 +19,6 @@ class Coordinator: NSObject, MKMapViewDelegate {
 }
 
 struct ContentView: View {
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.81062103807926177978515625, longitude: -122.45675641112029552459716796875), span: MKCoordinateSpan(latitudeDelta: 0.25, longitudeDelta: 0.25))
     @State var route: MKPolyline?
     
     var body: some View {
@@ -40,7 +39,7 @@ private extension ContentView {
 
 
 func getCoordinates()->[CLLocationCoordinate2D] {
-    var coordinates = [CLLocationCoordinate2D()]
+    var coordinates = Array<CLLocationCoordinate2D>()
     guard let fileURL = Bundle.main.url(forResource: "Crissy-8-13", withExtension: "gpx") else { return coordinates}
     guard let gpx = GPXParser(withURL: fileURL)?.parsedData() else { return coordinates }
     for track in gpx.tracks {
